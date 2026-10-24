@@ -1,0 +1,99 @@
+# ==============================================================================
+# Git Ignore Configuration for Rubber Detection Research Project
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Byte-compiled / optimized / DLL files
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# ------------------------------------------------------------------------------
+# Virtual Environments
+# ------------------------------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ------------------------------------------------------------------------------
+# Large Model Weights and Checkpoints (>100MB exceeds GitHub push limit)
+# Note: faster_rcnn_rubber.pth (165.7 MB), yolov8n.pt, yolov8n-seg.pt
+# Use Git LFS if tracking weights in remote git repositories.
+# ------------------------------------------------------------------------------
+*.pt
+*.pth
+*.pwf
+*.bin
+*.onnx
+*.engine
+*.tflite
+*.weights
+*.ckpt
+
+# If you specifically want to track lightweight base models, uncomment below:
+# !yolov8n.pt
+
+# ------------------------------------------------------------------------------
+# Compressed Datasets and Large Archives
+# Note: datasetall.zip (165.3 MB) exceeds GitHub standard file limit
+# ------------------------------------------------------------------------------
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# ------------------------------------------------------------------------------
+# Training, Experiment Runs & Logging
+# ------------------------------------------------------------------------------
+runs/
+wandb/
+tensorboard/
+exp*/
+checkpoints/
+*.log
+*.tfevents.*
+
+# ------------------------------------------------------------------------------
+# Jupyter Notebooks & IPython
+# ------------------------------------------------------------------------------
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# ------------------------------------------------------------------------------
+# Operating System & IDE Specific Files
+# ------------------------------------------------------------------------------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# IDEs & Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+
+# Temporary files & agent scratch directories
+scratch/
+tmp/
+temp/
+.agents/
+.gemini/
